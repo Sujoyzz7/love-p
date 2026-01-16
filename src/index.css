@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-script {
+    font-family: 'Dancing Script', cursive;
+  }
+}
+
+@layer components {
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .romantic-gradient {
+    background: linear-gradient(135deg, #FFB6C1 0%, #9333EA 50%, #B76E79 100%);
+  }
+  
+  .heart-pulse {
+    animation: heartPulse 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes heartPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
